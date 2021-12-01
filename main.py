@@ -10,4 +10,5 @@ for i in range(len(inputProg)):
 one = instok.tokenized_ins(instructions[0])
 
 print()
+print()
 
