@@ -1,15 +1,14 @@
-import instok
+import availreq
 
 file1 = open("inputProg.txt", "r")
 inputProg = file1.readlines()
-instructions = []
+instructions = []  #list of instructions
 
 for i in range(len(inputProg)):
     instructions.append(inputProg[i].strip('\n'))
 
-one = instok.tokenized_ins(instructions[0])
+y = availreq.showavareq(instructions)
 
-print()
-print()
-#toast
+print(y[0][0])
+
 

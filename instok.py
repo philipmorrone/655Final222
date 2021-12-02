@@ -1,5 +1,3 @@
-import re
-
 def tokenized_ins(inputins):
     """
 
