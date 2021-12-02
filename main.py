@@ -11,4 +11,5 @@ one = instok.tokenized_ins(instructions[0])
 
 print()
 print()
+#toast
 
