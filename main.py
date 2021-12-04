@@ -19,14 +19,21 @@ for x in range(0, 4):
     if x < 2:
         next2 = listOfIns[x+1]+listOfIns[x+2]
         #print("next 2:", next2)
-        arg1 = listOfIns[x][1]
         if listOfIns[x][0]is not "sw":
+            arg1 = listOfIns[x][1]
             if arg1 in next2:
                 haz = listOfIns[x].index(arg1)
-                print("Data Dependency:", listOfIns[x], listOfIns[x+1], "at index: ", haz)
+                print("Data Dependency:", listOfIns[x], listOfIns[x+1], "with register: ", listOfIns[x][haz])
+
+
     elif x==2 :
-        # print("next 1:", listOfIns[x+1])
-        print()
+        if listOfIns[x][0] is not "sw":
+            arg1 = listOfIns[x][1]
+            if arg1 in listOfIns[x+1]:
+                haz = listOfIns[x].index(arg1)
+                print("Data Dependency:", listOfIns[x], listOfIns[x + 1], "with register: ", listOfIns[x][haz])
+
+
     elif x==3 :
         # print("don't need to check")
         print()
