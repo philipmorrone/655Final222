@@ -17,3 +17,13 @@ for i in ListOfIns:
 
 depdetector.detector(ListOfIns)
 
+ins1 = ["F", "D", "X", "M", "W"]
+ins2 = ["-", "F", "D", "X", "M", "W"]
+ins3 = ["-", "-", "F", "D", "X", "M", "W"]
+ins4 = ["-", "-", "-", "F", "D", "X", "M", "W"]
+
+#ins2.insert(2,"s")
+#ins3.insert(2,"-")
+#ins4.insert(3,"-")
+
+print("", ins1, "\n", ins2, "\n", ins3, "\n", ins4)
