@@ -1,4 +1,4 @@
-def newTD(void):
+def newTD():
     ins1 = ["F", "D", "X", "M", "W"]
     ins2 = ["-", "F", "D", "X", "M", "W"]
     ins3 = ["-", "-", "F", "D", "X", "M", "W"]

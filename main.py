@@ -1,5 +1,6 @@
 import listoflistins
 import depdetector
+import createTD
 
 file1 = open("inputProg.txt", "r")
 inputProg = file1.readlines()
@@ -17,3 +18,6 @@ for i in ListOfIns:
 
 depdetector.detector(ListOfIns)
 
+myTD = createTD.newTD()
+
+print(myTD)
