@@ -18,6 +18,8 @@ for i in ListOfIns:
 
 depdetector.detector(ListOfIns)
 
-myTD = createTD.newTD()
+myTD = createTD.TD()
 
-print(myTD)
+x = myTD.retIns()
+
+

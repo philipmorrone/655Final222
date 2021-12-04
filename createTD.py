@@ -1,22 +1,23 @@
-def newTD():
-    ins1 = ["F", "D", "X", "M", "W"]
-    ins2 = ["-", "F", "D", "X", "M", "W"]
-    ins3 = ["-", "-", "F", "D", "X", "M", "W"]
-    ins4 = ["-", "-", "-", "F", "D", "X", "M", "W"]
+class TD:
+    count = 0
 
-    initTD = []
+    def __init__(self):
+        TD.count += 1
+        self.initTD = []
 
-    initTD.append(ins1)
-    initTD.append(ins2)
-    initTD.append(ins3)
-    initTD.append(ins4)
+        self.ins1 = ["F", "D", "X", "M", "W"]
+        self.ins2 = ["-", "F", "D", "X", "M", "W"]
+        self.ins3 = ["-", "-", "F", "D", "X", "M", "W"]
+        self.ins4 = ["-", "-", "-", "F", "D", "X", "M", "W"]
 
-    # ins2.insert(2,"s")
-    # ins3.insert(2,"-")
-    # ins4.insert(3,"-")
+        self.initTD.append(self.ins1)
+        self.initTD.append(self.ins2)
+        self.initTD.append(self.ins3)
+        self.initTD.append(self.ins4)
 
-    # print(initTD, "\n")
+    def retIns(self):
+        return self.ins1
 
-    # print("", ins1, "\n", ins2, "\n", ins3, "\n", ins4)
 
-    return initTD
+
+
