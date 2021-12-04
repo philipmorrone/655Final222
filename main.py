@@ -16,7 +16,6 @@ for i in listOfIns:
     print(i)
 
 for x in range(0, 4):
-    print(x)
     if x < 2:
         next2 = listOfIns[x+1]+listOfIns[x+2]
         # print(listOfIns[x][0])
@@ -35,7 +34,7 @@ for x in range(0, 4):
                     print("Data Dependency:", listOfIns[x], listOfIns[x + 2], "with register: ", listOfIns[x][haz])
                 else:
                     continue
-    elif x==2 :
+    elif x == 2:
         if listOfIns[x][0] != "sw":
             arg1 = listOfIns[x][1]
             # print(arg1)
