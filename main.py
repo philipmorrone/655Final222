@@ -19,7 +19,3 @@ for i in ListOfIns:
 depdetector.detector(ListOfIns)
 
 myTD = createTD.TD()
-
-x = myTD.retIns()
-
-
