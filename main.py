@@ -23,7 +23,10 @@ for x in range(0, 4):
             arg1 = listOfIns[x][1]
             if arg1 in next2:
                 haz = listOfIns[x].index(arg1)
-                print("Data Dependency:", listOfIns[x], listOfIns[x+1], "with register: ", listOfIns[x][haz])
+                if haz in listOfIns[x+1]:
+                    print("Data Dependency:", listOfIns[x], listOfIns[x+1], "with register: ", listOfIns[x][haz])
+                else:
+                    print("Data Dependency:", listOfIns[x], listOfIns[x + 2], "with register: ", listOfIns[x][haz])
 
 
     elif x==2 :
