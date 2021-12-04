@@ -16,23 +16,35 @@ for i in listOfIns:
     print(i)
 
 for x in range(0, 4):
+    print(x)
     if x < 2:
         next2 = listOfIns[x+1]+listOfIns[x+2]
-        #print("next 2:", next2)
-        if listOfIns[x][0]is not "sw":
+        # print(listOfIns[x][0])
+        # print("next 2:", next2)
+        if listOfIns[x][0] != "sw":
             arg1 = listOfIns[x][1]
+            # print(arg1)
             if arg1 in next2:
                 haz = listOfIns[x].index(arg1)
-                if listOfIns[x][haz] in listOfIns[x+1]:
+                if arg1 in listOfIns[x+1] and arg1 in listOfIns[x+2]:
                     print("Data Dependency:", listOfIns[x], listOfIns[x+1], "with register: ", listOfIns[x][haz])
-                elif listOfIns[x][haz] in listOfIns[x+2]:
+                    print("Data Dependency:", listOfIns[x], listOfIns[x+2], "with register: ", listOfIns[x][haz])
+                elif arg1 in listOfIns[x+1]:
+                    print("Data Dependency:", listOfIns[x], listOfIns[x + 1], "with register: ", listOfIns[x][haz])
+                elif arg1 in listOfIns[x+2]:
                     print("Data Dependency:", listOfIns[x], listOfIns[x + 2], "with register: ", listOfIns[x][haz])
                 else:
                     print()
-
-
     elif x==2 :
-        print()
+        print("x==2", listOfIns[x][0])
+        if listOfIns[x][0] != "sw":
+            arg1 = listOfIns[x][1]
+            # print(arg1)
+            if arg1 in listOfIns[x+1]:
+                haz = listOfIns[x].index(arg1)
+                print("Data Dependency:", listOfIns[x], listOfIns[x + 1], "with register: ", listOfIns[x][haz])
+        else:
+            print()
     elif x==3 :
         # print("don't need to check")
         print()
