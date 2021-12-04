@@ -7,7 +7,7 @@ instructions = []  # list of instructions
 
 for i in range(len(inputProg)):
     instructions.append(inputProg[i].strip('\n'))
-    print(instructions[i])
+    #print(instructions[i])
 
 # Tokenized Instructions
 listOfIns = listoflistins.lol(instructions)
