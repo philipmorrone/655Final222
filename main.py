@@ -37,6 +37,7 @@ for x in range(0, 4):
                 print("Data Dependency:", listOfIns[x], listOfIns[x + 1], "with register: ", listOfIns[x][haz])
 
 
+
     elif x==3 :
         # print("don't need to check")
         print()
