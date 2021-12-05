@@ -25,6 +25,18 @@ class TD:
         elif x == 4:
             return self.ins4
 
+    def insertStall(self, x, myList):
+        """
+
+            :type myList: list
+        """
+        myList.insert(x, "s")
+
+    def printTD(self):
+        print(self.ins1)
+        print(self.ins2)
+        print(self.ins3)
+        print(self.ins4)
 
 
 

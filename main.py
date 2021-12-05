@@ -1,6 +1,5 @@
 import listoflistins
 import depdetector
-import createTD
 
 file1 = open("inputProg.txt", "r")
 inputProg = file1.readlines()
@@ -16,6 +15,7 @@ ListOfIns = listoflistins.lol(instructions)
 for i in ListOfIns:
     print(i)
 
+print()
+
 depdetector.detector(ListOfIns)
 
-myTD = createTD.TD()

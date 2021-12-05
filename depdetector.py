@@ -1,3 +1,7 @@
+import createTD
+
+myTD = createTD.TD()
+
 def detector(myListOfIns):
     for x in range(0, 4):
         if x < 2:
@@ -37,3 +41,9 @@ def detector(myListOfIns):
             print()
         else:
             print("fallthrough")
+    print("Initial Timing Diagram:\n")
+    for i in myTD.initTD:
+        print(i)
+
+
+
