@@ -3,6 +3,7 @@ import createTD
 myTD = createTD.TD()
 
 def detector(myListOfIns):
+    print("Hazards:")
     for x in range(0, 4):
         if x < 2:
             next2 = myListOfIns[x + 1] + myListOfIns[x + 2]
@@ -39,7 +40,33 @@ def detector(myListOfIns):
 
     print("Initial Timing Diagram:")
     for i in myTD.initTD:
-        print(i)
+        print(''.join(i))
+    print()
 
-def nfu
+def nfu(myListOfIns):
+    for x in range(0, 4):
+        if x == 0:
+            nextIns = myListOfIns[x+1]
+            nextins2 = myListOfIns[x+2]
+            arg1 = myListOfIns[x][1]
+            if arg1 in nextIns:
+                myTD.insert(x + 1, 2, "s")
+                myTD.insert(x + 1, 3, "s")
+                myTD.insert(x + 2, 2, "-")
+                myTD.insert(x + 2, 3, "-")
+                myTD.insert(x + 3, 2, "-")
+                myTD.insert(x + 3, 3, "-")
+            elif arg1 in nextins2:
+                myTD.insert(x + 2, 2, "s")
+                myTD.insert(x + 2, 3, "s")
+                myTD.insert(x + 3, 2, "-")
+                myTD.insert(x + 3, 3, "-")
+                myTD.insert(x + 4, 2, "-")
+                myTD.insert(x + 4, 3, "-")
+
+
+
+    print("No Forwarding Unit:")
+    for i in myTD.initTD:
+        print(''.join(i))
 
