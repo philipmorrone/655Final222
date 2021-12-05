@@ -13,18 +13,20 @@ def detector(myListOfIns):
                 # print(arg1)
                 if arg1 in next2:
                     haz = myListOfIns[x].index(arg1)
-                    if arg1 in myListOfIns[x + 1] and arg1 in myListOfIns[x + 2]:
+                    if arg1 in myListOfIns[x + 1]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                               myListOfIns[x][haz])
-                        print("Data Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
-                              myListOfIns[x][haz])
-                    elif arg1 in myListOfIns[x + 1]:
-                        print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
-                              myListOfIns[x][haz])
-                        myTD.insertStall(x+1, 2)
+                        myTD.insert(x+1, 2, "s")
+                        myTD.insert(x+1, 3, "s")
+                        #myTD.insert(x+2, 2, "-")
+                        #myTD.insert(x+2, 3, "-")
                     elif arg1 in myListOfIns[x + 2]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
                               myListOfIns[x][haz])
+                        myTD.insert(x + 1, 2, "s")
+                        myTD.insert(x + 1, 3, "s")
+                        # myTD.insert(x+2, 2, "-")
+                        # myTD.insert(x+2, 3, "-")
                     else:
                         continue
         elif x == 2:
@@ -35,6 +37,10 @@ def detector(myListOfIns):
                     haz = myListOfIns[x].index(arg1)
                     print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                           myListOfIns[x][haz])
+                    myTD.insert(x + 1, 2, "s")
+                    myTD.insert(x + 1, 3, "s")
+                    # myTD.insert(x+2, 2, "-")
+                    # myTD.insert(x+2, 3, "-")
             else:
                 continue
         elif x == 3:

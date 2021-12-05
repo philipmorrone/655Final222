@@ -25,8 +25,8 @@ class TD:
         elif x == 4:
             return self.ins4
 
-    def insertStall(self, ins, index):
-        self.initTD[ins].insert(index, "s")
+    def insert(self, ins, index, chara):
+        self.initTD[ins].insert(index, chara)
 
     def printTD(self):
         print(self.ins1)
