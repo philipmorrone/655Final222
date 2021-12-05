@@ -60,7 +60,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 3, 3, "-")
                 myTD.insert(x + 3, 4, "-")
                 fired = 1
-            elif arg1 in nextins2 or fired >= 1:
+            elif arg1 in nextins2:
                 myTD.insert(x + 2, 3, "s")
                 myTD.insert(x + 3, 3, "-")
                 fired = 1
