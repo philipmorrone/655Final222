@@ -21,6 +21,7 @@ def detector(myListOfIns):
                     elif arg1 in myListOfIns[x + 1]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                               myListOfIns[x][haz])
+                        myTD.insertStall(x+1, 2)
                     elif arg1 in myListOfIns[x + 2]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
                               myListOfIns[x][haz])
@@ -41,6 +42,7 @@ def detector(myListOfIns):
             print()
         else:
             print("fallthrough")
+
     print("Initial Timing Diagram:\n")
     for i in myTD.initTD:
         print(i)
