@@ -2,6 +2,7 @@ import createTD
 
 myTD = createTD.TD()
 
+
 def detector(myListOfIns):
     print("Hazards:")
     for x in range(0, 4):
@@ -43,46 +44,48 @@ def detector(myListOfIns):
         print(''.join(i))
     print()
 
+
 def nfu(myListOfIns):
+    fired = 0
     for x in range(0, 4):
         if x == 0:
-            nextIns = myListOfIns[x+1]
-            nextins2 = myListOfIns[x+2]
+            nextIns = myListOfIns[x + 1]
+            nextins2 = myListOfIns[x + 2]
             arg1 = myListOfIns[x][1]
             if arg1 in nextIns:
                 myTD.insert(x + 1, 2, "s")
                 myTD.insert(x + 1, 3, "s")
                 myTD.insert(x + 2, 2, "-")
                 myTD.insert(x + 2, 3, "-")
-                myTD.insert(x + 3, 2, "-")
-                myTD.insert(x + 3, 3, "-")
-            elif arg1 in nextins2:
-                myTD.insert(x + 2, 3, "s")
-                myTD.insert(x + 2, 4, "s")
                 myTD.insert(x + 3, 3, "-")
                 myTD.insert(x + 3, 4, "-")
-            fired = 2
+                fired = 1
+            elif arg1 in nextins2 or fired >= 1:
+                myTD.insert(x + 2, 3, "s")
+                myTD.insert(x + 3, 3, "-")
+                fired = 1
+
 
         elif x == 1:
             nextIns = myListOfIns[x + 1]
             nextins2 = myListOfIns[x + 2]
             arg1 = myListOfIns[x][1]
-            if (arg1 in nextIns and fired<1):
+            if arg1 in nextIns and fired < 1:
                 myTD.insert(x + 1, 3, "s")
                 myTD.insert(x + 1, 4, "s")
                 myTD.insert(x + 2, 5, "-")
                 myTD.insert(x + 2, 6, "-")
+            elif arg1 in nextins2 and fired < 1:
+                myTD.insert(x + 2, 4, "s")
+
 
         elif x == 2:
             nextIns = myListOfIns[x + 1]
             arg1 = myListOfIns[x][1]
-            if (arg1 in nextIns and fired<1):
-                myTD.insert(x + 1, 3, "s")
+            if arg1 in nextIns and fired < 1:
                 myTD.insert(x + 1, 4, "s")
-                myTD.insert(x + 2, 5, "-")
-                myTD.insert(x + 2, 6, "-")
+                myTD.insert(x + 1, 5, "s")
 
     print("No Forwarding Unit:")
     for i in myTD.initTD:
         print(''.join(i))
-
