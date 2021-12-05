@@ -57,12 +57,10 @@ def nfu(myListOfIns):
                 myTD.insert(x + 3, 2, "-")
                 myTD.insert(x + 3, 3, "-")
             elif arg1 in nextins2:
-                myTD.insert(x + 2, 2, "s")
                 myTD.insert(x + 2, 3, "s")
-                myTD.insert(x + 3, 2, "-")
+                myTD.insert(x + 2, 4, "s")
                 myTD.insert(x + 3, 3, "-")
-                myTD.insert(x + 4, 2, "-")
-                myTD.insert(x + 4, 3, "-")
+                myTD.insert(x + 3, 4, "-")
 
 
 
