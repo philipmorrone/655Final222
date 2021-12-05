@@ -11,7 +11,7 @@ for i in range(len(inputProg)):
 
 # Tokenized Instructions
 ListOfIns = listoflistins.lol(instructions)
-
+print()
 for i in ListOfIns:
     print(i)
 

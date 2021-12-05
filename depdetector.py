@@ -16,17 +16,9 @@ def detector(myListOfIns):
                     if arg1 in myListOfIns[x + 1]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                               myListOfIns[x][haz])
-                        myTD.insert(x+1, 2, "s")
-                        myTD.insert(x+1, 3, "s")
-                        #myTD.insert(x+2, 2, "-")
-                        #myTD.insert(x+2, 3, "-")
                     elif arg1 in myListOfIns[x + 2]:
                         print("Data Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
                               myListOfIns[x][haz])
-                        myTD.insert(x + 1, 2, "s")
-                        myTD.insert(x + 1, 3, "s")
-                        # myTD.insert(x+2, 2, "-")
-                        # myTD.insert(x+2, 3, "-")
                     else:
                         continue
         elif x == 2:
@@ -37,10 +29,6 @@ def detector(myListOfIns):
                     haz = myListOfIns[x].index(arg1)
                     print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                           myListOfIns[x][haz])
-                    myTD.insert(x + 1, 2, "s")
-                    myTD.insert(x + 1, 3, "s")
-                    # myTD.insert(x+2, 2, "-")
-                    # myTD.insert(x+2, 3, "-")
             else:
                 continue
         elif x == 3:
@@ -49,9 +37,9 @@ def detector(myListOfIns):
         else:
             print("fallthrough")
 
-    print("Initial Timing Diagram:\n")
+    print("Initial Timing Diagram:")
     for i in myTD.initTD:
         print(i)
 
-
+def nfu
 
