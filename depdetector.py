@@ -110,13 +110,23 @@ def wfu(myListOfIns):
                 nextins = myListOfIns[x+1]
                 arg1 = myListOfIns[x][1]
                 if arg1 in nextins:
-                    myTD2.insert(x+1,3,"s")
-                    myTD2.insert(x+2,3,"s")
-                    myTD2.insert(x+3,0,"-")
-                    # next1 D+1
-                    # next2 F+1
+                    myTD2.insert(x+1, 3, "s")
+                    myTD2.insert(x+2, 3, "s")
+                    myTD2.insert(x+3, 0, "-")
+                fired = 1
+
         elif x == 1:
-            continue
+            if myListOfIns[x][0]=="lw":
+                nextins = myListOfIns[x+1]
+                arg1 = myListOfIns[x][1]
+                if arg1 in nextins:
+                    dloc = myTD2.ins3.index("D")
+                    floc = myTD2.ins4.index("F")
+                    myTD2.insert(x+1, dloc+1,"s")
+                    myTD2.insert(x+2, floc+1,"s")
+
+
+
         elif x == 2:
             continue
 
