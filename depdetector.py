@@ -86,15 +86,16 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 4, "s")
             fired = 2
             print("Fired: ", fired)
+
         elif x == 2:
             nextIns = myListOfIns[x + 1]
             arg1 = myListOfIns[x][1]
-            if arg1 in nextIns and fired <1 and myListOfIns[x][0] != "sw":
+            if arg1 in nextIns and fired <2 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, 4, "s")
                 myTD.insert(x + 1, 5, "s")
-            elif arg1 in nextIns and fired ==1 and myListOfIns[x][0] != "sw":
-                myTD.insert(x + 1, 4, "s")
-                myTD.insert(x + 1, 5, "s")
+            elif arg1 in nextIns and fired == 2 and myListOfIns[x][0] != "sw":
+                myTD.insert(x + 1, 8, "s")
+                myTD.insert(x + 1, 9, "s")
 
     print("No Forwarding Unit:")
     for i in myTD.initTD:
