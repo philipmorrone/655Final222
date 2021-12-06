@@ -100,7 +100,15 @@ def nfu(myListOfIns):
     print("No Forwarding Unit:")
     for i in myTD.initTD:
         print(''.join(i))
+    print()
 
 def wfu(myListOfIns):
     for x in range(0,4):
-        print(myListOfIns[x])
+        if x == 0:
+            if myListOfIns[x][0]=="lw":
+                nextins = myListOfIns[x+1]
+                arg1 = myListOfIns[x][1]
+                if arg1 in nextins:
+                    myListOfIns[x+1]
+                    # next1 D+1
+                    # next2 F+1

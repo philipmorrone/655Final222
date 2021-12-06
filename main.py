@@ -20,3 +20,4 @@ print()
 
 depdetector.detector(ListOfIns)
 depdetector.nfu(ListOfIns)
+depdetector.wfu(ListOfIns)
