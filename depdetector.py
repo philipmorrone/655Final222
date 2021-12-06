@@ -64,7 +64,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 3, "s")
                 myTD.insert(x + 3, 3, "-")
                 fired = 1
-            print("Fired: ", fired)
+            #print("Fired: ", fired)
 
         elif x == 1:
             nextIns = myListOfIns[x + 1]
@@ -85,7 +85,7 @@ def nfu(myListOfIns):
             elif arg1 in nextins2 and fired == 1 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 2, 4, "s")
             fired = 2
-            print("Fired: ", fired)
+            #print("Fired: ", fired)
 
         elif x == 2:
             nextIns = myListOfIns[x + 1]
@@ -100,3 +100,7 @@ def nfu(myListOfIns):
     print("No Forwarding Unit:")
     for i in myTD.initTD:
         print(''.join(i))
+
+def wfu(myListOfIns):
+    for x in range(0,4):
+        print(myListOfIns[x])
