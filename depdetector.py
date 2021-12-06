@@ -1,6 +1,7 @@
 import createTD
 
 myTD = createTD.TD()
+myTD2 = createTD.TD()
 
 
 def detector(myListOfIns):
@@ -109,6 +110,16 @@ def wfu(myListOfIns):
                 nextins = myListOfIns[x+1]
                 arg1 = myListOfIns[x][1]
                 if arg1 in nextins:
-                    myListOfIns[x+1]
+                    myTD2.insert(x+1,3,"s")
+                    myTD2.insert(x+2,3,"s")
+                    myTD2.insert(x+3,0,"-")
                     # next1 D+1
                     # next2 F+1
+        elif x == 1:
+            continue
+        elif x == 2:
+            continue
+
+    for i in myTD2.initTD:
+        print(''.join(i))
+    print()
