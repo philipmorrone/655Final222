@@ -128,8 +128,15 @@ def wfu(myListOfIns):
 
 
         elif x == 2:
-            continue
+            if myListOfIns[x][0]=="lw":
+                nextins = myListOfIns[x+1]
+                arg1 = myListOfIns[x][1]
+                if arg1 in nextins:
+                    dloc = myTD2.ins3.index("D")
+                    floc = myTD2.ins4.index("F")
+                    myTD2.insert(x+1, dloc+2,"s")
 
+    print("With Forwarding Unit:")
     for i in myTD2.initTD:
         print(''.join(i))
     print()
