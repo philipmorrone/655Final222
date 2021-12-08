@@ -40,9 +40,9 @@ def detector(myListOfIns):
         else:
             print("fallthrough")
 
-    print("Initial Timing Diagram:")
-    for i in myTD.initTD:
-        print(''.join(i))
+    # print("Initial Timing Diagram:")
+    # for i in myTD.initTD:
+        # print(''.join(i))
     print()
 
 
