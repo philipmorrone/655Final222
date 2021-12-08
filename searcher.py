@@ -1,2 +1,2 @@
 def search(inputstr):
-    for
+    print()
