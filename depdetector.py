@@ -17,10 +17,10 @@ def detector(myListOfIns):
                 if arg1 in next2:
                     haz = myListOfIns[x].index(arg1)
                     if arg1 in myListOfIns[x + 1]:
-                        print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
+                        print("Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                               myListOfIns[x][haz])
                     elif arg1 in myListOfIns[x + 2]:
-                        print("Data Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
+                        print("Dependency:", myListOfIns[x], myListOfIns[x + 2], "with register: ",
                               myListOfIns[x][haz])
                     else:
                         continue
@@ -30,7 +30,7 @@ def detector(myListOfIns):
                 # print(arg1)
                 if arg1 in myListOfIns[x + 1]:
                     haz = myListOfIns[x].index(arg1)
-                    print("Data Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
+                    print("Dependency:", myListOfIns[x], myListOfIns[x + 1], "with register: ",
                           myListOfIns[x][haz])
             else:
                 continue
