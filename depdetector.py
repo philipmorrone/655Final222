@@ -57,9 +57,9 @@ def nfu(myListOfIns):
 
             sw1 = 0
             sw2 = 0
-            if nextIns[0] == "lw" and arg1 in nextIns[1:4]:
+            if nextIns[0] == "sw" and arg1 in nextIns[1:4]:
                 sw1 = 1
-            if nextins2[0] == "lw" and arg1 in nextins2[1:4]:
+            if nextins2[0] == "sw" and arg1 in nextins2[1:4]:
                 sw2 = 1
 
             print("swi 0+1: ", sw1)
@@ -77,7 +77,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 3, "s")
                 myTD.insert(x + 3, 3, "-")
                 fired = 1
-            print("Fired: ", fired)
+            # print("Fired: ", fired)
 
         elif x == 1:
             nextIns = myListOfIns[x + 1]
@@ -86,9 +86,9 @@ def nfu(myListOfIns):
 
             sw1 = 0
             sw2 = 0
-            if nextIns[0] == "lw" and arg1 in nextIns[1:4]:
+            if nextIns[0] == "sw" and arg1 in nextIns[1:4]:
                 sw1 = 1
-            if nextins2[0] == "lw" and arg1 in nextins2[1:4]:
+            if nextins2[0] == "sw" and arg1 in nextins2[1:4]:
                 sw2 = 1
 
             print("swi 1+1: ", sw1)
@@ -113,7 +113,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 5, "s")
 
             fired = 2
-            print("Fired: ", fired)
+            # print("Fired: ", fired)
 
         elif x == 2:
             nextIns = myListOfIns[x + 1]
@@ -122,7 +122,7 @@ def nfu(myListOfIns):
             # print("floc: ",floc)
 
             sw1 = 0
-            if nextIns[0] == "lw" and arg1 in nextIns[1:4]:
+            if nextIns[0] == "sw" and arg1 in nextIns[1:4]:
                 sw1 = 1
 
             print("swi 2+1: ", sw1)
