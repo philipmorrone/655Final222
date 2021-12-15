@@ -84,7 +84,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 0, "-")
                 myTD.insert(x + 2, 0, "-")
             elif arg1 in nextins2 and fired == 1 and myListOfIns[x][0] != "sw":
-                myTD.insert(x + 2, 4, "s")
+                myTD.insert(x + 2, 5, "s")
             fired = 2
             #print("Fired: ", fired)
 
