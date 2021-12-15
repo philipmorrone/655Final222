@@ -53,6 +53,7 @@ def nfu(myListOfIns):
             nextIns = myListOfIns[x + 1]
             nextins2 = myListOfIns[x + 2]
             arg1 = myListOfIns[x][1]
+            print("nextins0: ", nextIns[2:4])
             if arg1 in nextIns and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, 2, "s")
                 myTD.insert(x + 1, 3, "s")
