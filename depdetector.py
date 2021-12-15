@@ -65,7 +65,7 @@ def nfu(myListOfIns):
             print("swi 0+1: ", sw1)
             print("swi 0+2: ", sw2)
 
-            if arg1 in nextIns and myListOfIns[x][0] != "sw":
+            if (arg1 in nextIns[2:4] or sw1 == 1) and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, 2, "s")
                 myTD.insert(x + 1, 3, "s")
                 myTD.insert(x + 2, 0, "-")
@@ -73,7 +73,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 3, 0, "-")
                 myTD.insert(x + 3, 0, "-")
                 fired = 1
-            elif arg1 in nextins2 and myListOfIns[x][0] != "sw":
+            elif (arg1 in nextins2[2:4] or sw2 == 1) and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 2, 3, "s")
                 myTD.insert(x + 3, 3, "-")
                 fired = 1
@@ -94,22 +94,22 @@ def nfu(myListOfIns):
             print("swi 1+1: ", sw1)
             print("swi 1+2: ", sw2)
 
-            if arg1 in nextIns and fired < 1 and myListOfIns[x][0] != "sw":
+            if (arg1 in nextIns[2:4] or sw1 == 1) and fired < 1 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, 3, "s")
                 myTD.insert(x + 1, 4, "s")
                 myTD.insert(x + 2, 0, "-")
                 myTD.insert(x + 2, 0, "-")
 
-            elif arg1 in nextins2 and fired < 1 and myListOfIns[x][0] != "sw":
+            elif (arg1 in nextins2[2:4] or sw2 == 1) and fired < 1 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 2, 4, "s")
 
-            elif arg1 in nextIns and fired == 1 and myListOfIns[x][0] != "sw":
+            elif (arg1 in nextIns[2:4] or sw1 == 1) and fired == 1 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, 5, "s")
                 myTD.insert(x + 1, 6, "s")
                 myTD.insert(x + 2, 0, "-")
                 myTD.insert(x + 2, 0, "-")
 
-            elif arg1 in nextins2 and fired == 1 and myListOfIns[x][0] != "sw":
+            elif (arg1 in nextins2[2:4] or sw2 == 1) and fired == 1 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 2, 5, "s")
 
             fired = 2
@@ -127,13 +127,13 @@ def nfu(myListOfIns):
 
             print("swi 2+1: ", sw1)
 
-            if arg1 in nextIns and fired <2 and myListOfIns[x][0] != "sw":
+            if (arg1 in nextIns[2:4] or sw1 == 1) and fired <2 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, floc+1, "s")
                 myTD.insert(x + 1, floc+2, "s")
 
                 # myTD.insert(x + 1, 4, "s")
                 # myTD.insert(x + 1, 5, "s")
-            elif arg1 in nextIns and fired == 2 and myListOfIns[x][0] != "sw":
+            elif (arg1 in nextIns[2:4] or sw1 == 1) and fired == 2 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, floc + 1, "s")
                 myTD.insert(x + 1, floc + 2, "s")
 
