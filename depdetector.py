@@ -48,6 +48,9 @@ def detector(myListOfIns):
 
 def nfu(myListOfIns):
     fired = 0
+    gg = 0
+    hh = 0
+
     for x in range(0, 4):
         if x == 0:
             nextIns = myListOfIns[x + 1]
@@ -73,6 +76,7 @@ def nfu(myListOfIns):
                 myTD.insert(x + 3, 0, "-")
                 myTD.insert(x + 3, 0, "-")
                 fired = 1
+                gg = 1
                 print("case1\n")
             elif (arg1 in nextins2[2:4] or sw2 == 1) and (arg1 not in nextIns) and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 2, 3, "s")
@@ -114,9 +118,10 @@ def nfu(myListOfIns):
                 myTD.insert(x + 2, 0, "-")
                 print("case5\n")
 
-            #elif (arg1 in nextins2[2:4] or sw2 == 1) and fired == 1 and myListOfIns[x][0] != "sw":
-                #myTD.insert(x + 2, 5, "s")
-                #print("case6\n")
+            elif (arg1 in nextins2[2:4] or sw2 == 1) and gg == 1 and fired == 1 and myListOfIns[x][0] != "sw":
+                myTD.insert(x + 2, 6, "s")
+                hh = 1
+                print("case6\n")
             fired = 2
             # print("Fired: ", fired)
 
@@ -126,11 +131,16 @@ def nfu(myListOfIns):
             floc = myTD.ins4.index("F")
             # print("floc: ",floc)
 
+            #print("hh = ",hh)
+            #print("fired = ",fired)
+            #print("arg1 = ",arg1)
+            #print("nextIns14: ",nextIns[1:4])
+
             sw1 = 0
             if nextIns[0] == "sw" and arg1 in nextIns[1:4]:
                 sw1 = 1
 
-            # print("swi 2+1: ", sw1)
+            #print("sw: ", sw1)
 
             if (arg1 in nextIns[2:4] or sw1 == 1) and fired <2 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, floc+1, "s")
@@ -139,6 +149,11 @@ def nfu(myListOfIns):
 
                 # myTD.insert(x + 1, 4, "s")
                 # myTD.insert(x + 1, 5, "s")
+
+            elif (arg1 in nextIns[2:4] or sw1 == 1) and hh == 1 and fired == 2 and myListOfIns[x][0] != "sw":
+                myTD.insert(x + 1, floc + 1, "s")
+                print("case99\n")
+
             elif (arg1 in nextIns[2:4] or sw1 == 1) and fired == 2 and myListOfIns[x][0] != "sw":
                 myTD.insert(x + 1, floc + 1, "s")
                 myTD.insert(x + 1, floc + 2, "s")
@@ -146,6 +161,8 @@ def nfu(myListOfIns):
 
                 # myTD.insert(x + 1, 8, "s")
                 # myTD.insert(x + 1, 9, "s")
+
+
 
     print("No Forwarding Unit:")
     for i in myTD.initTD:
