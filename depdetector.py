@@ -158,7 +158,12 @@ def wfu(myListOfIns):
             if myListOfIns[x][0]=="lw":
                 nextins = myListOfIns[x+1]
                 arg1 = myListOfIns[x][1]
-                if arg1 in nextins:
+
+                sw1 = 0
+                if nextins[0] == "sw" and arg1 in nextins[1:4]:
+                    sw1 = 1
+
+                if (arg1 in nextins[2:4] or sw1 == 1):
                     myTD2.insert(x+1, 3, "s")
                     myTD2.insert(x+2, 3, "s")
                     myTD2.insert(x+3, 0, "-")
@@ -168,7 +173,12 @@ def wfu(myListOfIns):
             if myListOfIns[x][0]=="lw":
                 nextins = myListOfIns[x+1]
                 arg1 = myListOfIns[x][1]
-                if arg1 in nextins:
+
+                sw1 = 0
+                if nextins[0] == "sw" and arg1 in nextins[1:4]:
+                    sw1 = 1
+
+                if (arg1 in nextins[2:4] or sw1 == 1):
                     dloc = myTD2.ins3.index("D")
                     floc = myTD2.ins4.index("F")
                     myTD2.insert(x+1, dloc+1,"s")
@@ -180,7 +190,12 @@ def wfu(myListOfIns):
             if myListOfIns[x][0]=="lw":
                 nextins = myListOfIns[x+1]
                 arg1 = myListOfIns[x][1]
-                if arg1 in nextins:
+
+                sw1 = 0
+                if nextins[0] == "sw" and arg1 in nextins[1:4]:
+                    sw1 = 1
+
+                if (arg1 in nextins[2:4] or sw1 ==1):
                     dloc = myTD2.ins3.index("D")
                     floc = myTD2.ins4.index("F")
                     myTD2.insert(x+1, dloc+2,"s")
